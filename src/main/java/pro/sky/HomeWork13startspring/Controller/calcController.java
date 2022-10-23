@@ -37,7 +37,7 @@ public class calcController {
     @GetMapping(path = "calc/minus")
     public String minus(@RequestParam(name = "a") Integer a,
                         @RequestParam(name = "b") Integer b) {
-        int minus = CalcService.minus(a, b);
+        Double minus = CalcService.minus(a, b);
         return a + " - " + b + " = " + minus;
     }
 
@@ -51,7 +51,7 @@ public class calcController {
     @GetMapping(path = "calc/divide")
     public String divide(@RequestParam(name = "a") Integer a,
                          @RequestParam(name = "b") Integer b) {
-        String divide = CalcService.divide(a, b);
+        Double divide = CalcService.divide(a, b);
         return a + " / " + b + " = " + divide;
     }
 
